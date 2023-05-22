@@ -1,0 +1,5 @@
+from 'C:\Flask\empresas_porte.csv'
+
+with ( FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2);

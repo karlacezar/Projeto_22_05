@@ -1,0 +1,44 @@
+CREATE VIEW [dbo].[COTACOES] AS
+SELECT 
+	   a.[id]
+      ,a.[tp_reg]
+      ,CONVERT(date, CAST(a.[dt_pregao] as varchar(8)),112) as dt_pregao 
+      ,a.[cd_bdi]
+      ,a.[cd_acao]
+      ,a.[tp_merc]
+      ,a.[nm_empresa_rdz]
+      ,a.[especi]
+      ,a.[prazot]
+      ,a.[moeda_ref]
+      ,a.[vl_abertura]
+      ,a.[vl_maximo]
+      ,a.[vl_minimo]
+      ,a.[vl_medio]
+      ,a.[vl_fechamento]
+      ,a.[vl_mlh_oft_compra]
+      ,a.[vl_mlh_oft_venda]
+      ,a.[vl_ttl_neg]
+      ,a.[qt_tit_neg]
+      ,a.[vl_volume]
+      ,a.[vl_exec_opc]
+      ,a.[in_opc]
+      ,a.[dt_vnct_opc]
+      ,a.[ft_cotacao]
+      ,a.[vl_exec_moeda_corrente]
+      ,a.[cd_isin]
+      ,a.[cd_acao_rdz]
+      ,a.[created_at]
+      ,a.[updated_at]
+      ,a.[index_level_0]
+	  ,b.vl_cnpj
+  FROM [Neoway].[dbo].[cotacoes_bolsa] a
+  INNER JOIN empresas_bolsa b on a.cd_acao = b.cd_acao
+  Where 7=7 
+  And CONVERT(date, CAST(a.[dt_pregao] as varchar(8)),112)  between '24/01/2022' and '21/10/2022'
+  And  a.[vl_abertura]   < 10000000
+  And  a.[vl_maximo]   < 10000000
+  And  a.[vl_minimo]      < 10000000
+  And  a.[vl_medio]        < 10000000
+  And  a.[vl_fechamento]  < 10000000
+
+GO

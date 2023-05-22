@@ -1,0 +1,7 @@
+bulk insert df_empresas
+
+from 'C:\Flask\df_empresas.csv'
+
+with ( FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2);

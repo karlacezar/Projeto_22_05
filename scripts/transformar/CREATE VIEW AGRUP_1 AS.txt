@@ -1,0 +1,11 @@
+CREATE VIEW AGRUP_1 AS
+SELECT  
+
+	   A.[cnpj]
+      ,A.[nivel_atividade]
+	  ,B.[empresa_porte]
+	  ,C.[saude_tributaria]
+
+  FROM [Neoway].[dbo].[empresas_nivel_atividade] A
+  INNER JOIN empresas_porte B ON A.cnpj = B.cnpj
+  INNER JOIN empresas_saude_tributaria C ON A.cnpj = C.cnpj

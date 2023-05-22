@@ -1,0 +1,7 @@
+bulk insert contacoes_bolsa
+
+from 'C:\Flask\contacoes_bolsa.csv'
+
+with ( FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2);

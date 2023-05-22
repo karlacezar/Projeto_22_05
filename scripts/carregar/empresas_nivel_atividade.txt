@@ -1,0 +1,7 @@
+bulk insert empresas_nivel_atividade
+
+from 'C:\Flask\empresas_nivel_atividade.csv'
+
+with ( FIELDTERMINATOR = ',',
+ROWTERMINATOR = '\n',
+FIRSTROW = 2);
